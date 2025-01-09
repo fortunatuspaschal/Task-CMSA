@@ -10,7 +10,7 @@ export function AuthProvider({ children }) {
   const login = async (email, password) => {
     setIsLoading(true);
     try {
-      // Implement your login logic here
+      // Implement your login logic here okay
       setUser({ email }); // For demo, just setting email
     } catch (error) {
       throw error;
