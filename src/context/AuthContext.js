@@ -10,8 +10,7 @@ export function AuthProvider({ children }) {
   const login = async (email, password) => {
     setIsLoading(true);
     try {
-      // Implement your login logic here okay
-      setUser({ email }); // For demo, just setting email
+      setUser({ email }); 
     } catch (error) {
       throw error;
     } finally {
@@ -22,7 +21,6 @@ export function AuthProvider({ children }) {
   const register = async (email, password) => {
     setIsLoading(true);
     try {
-      // Implement your registration logic here
       setUser({ email });
     } catch (error) {
       throw error;
