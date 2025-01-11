@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Register() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { register } = useAuth();
@@ -29,7 +30,23 @@ export default function Register() {
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm space-y-4">
+          <div>
+              <label htmlFor="name" className="mb-2 font-medium text-default-600 text-black">
+                Full name{" "}
+              </label>
+              <input
+                type="name"
+                required
+                className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 text-black placeholder-gray-500"
+                placeholder="Full name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
             <div>
+              <label htmlFor="email" className="mb-2 font-medium text-default-600 text-black">
+                Email{" "}
+              </label>
               <input
                 type="email"
                 required
@@ -40,6 +57,9 @@ export default function Register() {
               />
             </div>
             <div>
+              <label htmlFor="password" className="mb-2 font-medium text-default-600 text-black">
+                Password{" "}
+              </label>
               <input
                 type="password"
                 required
@@ -59,7 +79,7 @@ export default function Register() {
         </form>
         <div className="text-center text-sm text-black">
           Already have an account?{' '}
-          <Link href="/auth/login" className="text-blue-600 hover:text-blue-700">
+          <Link href="/login" className="text-blue-600 hover:text-blue-700">
             Sign in here
           </Link>
         </div>

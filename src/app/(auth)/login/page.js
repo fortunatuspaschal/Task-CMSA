@@ -30,6 +30,7 @@ export default function Login() {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm space-y-4">
             <div>
+              <label htmlFor="email" className="mb-2 font-medium text-default-600 text-black">Email</label>
               <input
                 type="email"
                 required
@@ -40,6 +41,7 @@ export default function Login() {
               />
             </div>
             <div>
+              <label htmlFor="password" className="mb-2 font-medium text-default-600 text-black">Password</label>
               <input
                 type="password"
                 required
